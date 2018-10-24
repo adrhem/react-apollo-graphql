@@ -74,6 +74,8 @@ Vease [webpack.js.org](https://webpack.js.org/)
 
 
 # Think in React
+Lo más problematico para comenzar en react es pensar en _forma react_, existen otros frameworks y bibliotecas populares como jQuery que no tienen muchas similitudes entre sí, es por ello que es importante conocer los conceptos básicos para hacerlo de manera adecuada: _Think in React_
+
 ## ¿Qué es React?
 React es una biblioteca de JS creada por facebook para crear interfaces de usuario, según su descripción en el sitio oficial. Es usada hoy en día de manera agresiva debido a su escalabilidad y flexibilidad, puedes usar tanto react como tu aplicación lo requiera desde una _One Single Page_ hasta una aplicación completa como instagram o whatsapp. 
 
