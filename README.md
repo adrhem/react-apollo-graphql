@@ -14,7 +14,6 @@ El objetivo del curso será informar y enseñar de manera simple y práctica el 
   - [Components](#components)
   - [The Component Lifecycle](#the-component-lifecycle)
   - [Props](#props)
-  - [Ref](#ref)
   - [State](#state)
 - [GraphQL](#graphql)
   - [¿Qué es graphql?](#que-es-graphql)
@@ -29,7 +28,9 @@ El objetivo del curso será informar y enseñar de manera simple y práctica el 
 
 # Node.JS
 ## ¿Qué es `node`?
-JavaScript ejecutado del lado del servidor, tal como lo hace PHP, Ruby y otras tecnologías "backend". Vease [nodejs.org](https://nodejs.org/)
+JavaScript ejecutado del lado del servidor, tal como lo hace PHP, Ruby y otras tecnologías "backend". 
+
+Vease [nodejs.org](https://nodejs.org/)
 
 ## ¿Qué es `npm`?
 _Node Package Manager_ de sus siglas en inglés, `npm` es un manejador de dependiencias para node, es decir, un montón de librerías externas controladas de manera homogenea que permite un control simple del proyecto.
@@ -64,9 +65,117 @@ Además de `npm` podemos usar otros manejadores de paquetes para node, entre los
 - `npm upgrade package`: Actualiza un packete previamente instalado en `package.json`.
 - `yarn command`: Ejecuta un comando del archivo `package.json`.
 
-Vease: [yarnpkg.com](https://yarnpkg.com/)
+Vease [yarnpkg.com](https://yarnpkg.com/)
 
 # ¿Qué es `webpack`?
 Webpack es un `static module bundler`, quiere decir que toma muchas dependencias o librerías y genera un (o varios) "kit todo en uno". Es usado en muchos proyectos y modulos de node debido a su capacidad de personalización y configuración.
 
-Vease: [webpack.js.org](https://webpack.js.org/)
+Vease [webpack.js.org](https://webpack.js.org/)
+
+
+# Think in React
+## ¿Qué es React?
+React es una biblioteca de JS creada por facebook para crear interfaces de usuario, según su descripción en el sitio oficial. Es usada hoy en día de manera agresiva debido a su escalabilidad y flexibilidad, puedes usar tanto react como tu aplicación lo requiera desde una _One Single Page_ hasta una aplicación completa como instagram o whatsapp. 
+
+Vease [reactjs.org](https://reactjs.org/)
+
+## `create-react-app`
+La manera más sencilla de crear una aplicación react es con el comando `create-react-app nombre-app`.
+
+Vease [acebook.github.io/create-react-app](https://facebook.github.io/create-react-app/)
+
+## Components
+Los componentes es el _átomo_ de react, son piezas reusables (UI) que permiten comportarse de una manera independiente.
+
+La representación más básica de un componente react sería:
+
+```
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, World!</h1>;
+  }
+}
+```
+
+
+## The Component Lifecycle
+Los componentes en React tienen un ciclo de vida, es importante saber cuándo liberar espacio, llamar acciones dependiendo en qué ciclo esté por ejemplo llenar una lista después de haber sido renderizado o hacer validaciones de sus variables antes de renderizar.
+
+Los más básicos son: 
+
+```
+class Welcome extends React.Component {
+
+  constructor(props){
+    super(props);
+    //Soy lo primero en ejecutarse
+  }
+
+  componentWillMount(){
+    //Me ejecuto antes de renderizar
+  }
+
+  render() {
+    //Función que hace el renderizado del componente
+    return <h1>Hello, World!</h1>;
+  }
+
+  componentDidMount(){
+    //Me ejecuto después de renderizar
+  }
+
+  componentWillUnmount(){
+    //Me ejecuto cuando el componente se destruirá
+  }
+
+}
+```
+
+Existen más y para casos más específicos, pueden consultarse en la documentación de react.
+
+
+## Props
+Los props vendrían siendo los parametros de una función pero para un componente, viene de la palabra propiedades. Son variables que pueden ser pasadas y reusarlas, por ejemplo el nombre y edad de un componente Alumno. Se acceden a los props con la variable de referencia del objeto actual y la palabra props: `this.props.nombre_variable`.
+
+## State
+Es una variable propia del componente que está diseñada para cambiar, cualquier valor que se crea tendrá actualizaciones (Como un contador de carrito o un valor dentro de un input). 
+
+Se pueden declarar los states como una variable del componente, pueden irse añadiendo según la lógica lo requiera aunque se recomienda predefinirlos:
+
+
+```
+class Welcome extends React.Component {
+  state = {
+    nombre: "Adrián",
+    var1: 1,
+    var2: true,
+    var3: []
+  }
+  render() {
+    return <h1>Hello, {this.state.nombre}!</h1>;
+  }
+}
+```
+
+Para hacer una actualización basta con llamar `this.setState({nombre_var: nuevo_valor})`, no se puede llamar en constructor debido a que el componente no ha sido creado aún:
+
+```
+class Welcome extends React.Component {
+  state = {
+    nombre: "Adrián",
+    var1: 1,
+    var2: true,
+    var3: []
+  }
+  render() {
+    return <h1>Hello, {this.state.nombre}!</h1>;
+  }
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        nombre: "Julio"
+      });
+    },5000); //5 segundos
+  }
+}
+```
