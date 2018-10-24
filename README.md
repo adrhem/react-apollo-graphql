@@ -18,13 +18,14 @@ El objetivo del curso será informar y enseñar de manera simple y práctica el 
 - [GraphQL](#graphql)
   - [¿Qué es graphql?](#que-es-graphql)
   - [¿Por qué GraphQL?](#por-que-graphql)
-  - [[Insomnia](#insomnia)
+  - [Insomnia](#insomnia)
   - [Endpoint](#endpoing)
   - [Types](#types)
   - [Queries](#queries)
   - [Arguments](#arguments)
   - [Mutations](#mutations)
 - [Apollo GraphQL](#apollo-graphql)
+- [Contacto](#contacto)
 
 # Node.JS
 ## ¿Qué es `node`?
@@ -181,3 +182,6 @@ class Welcome extends React.Component {
   }
 }
 ```
+
+## Contacto
+Pueden escribirme sus dudas a mi telegram: [t.me/adrian_otter](https://t.me/adrian_otter).
