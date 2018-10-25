@@ -1,9 +1,7 @@
 const { ApolloServer, gql } = require('apollo-server');
-const {alumnos} = require('./data.js')
-
+const { alumnos } = require('./data.js')
 
 const typeDefs = gql`
-
   type Alumno {
     nombre: String!
     edad: Int
