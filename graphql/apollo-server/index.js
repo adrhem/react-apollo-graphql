@@ -10,13 +10,46 @@ const typeDefs = gql`
   }
 
   type Query {
-    alumnos: [Alumno]
+    alumnos(edad: Int): [Alumno]
+    alumno(nombre: String edad: Int): Alumno
   }
 `;
 
 const resolvers = {
   Query: {
-    alumnos: () => alumnos,
+    alumnos: (_, args) => {
+      var edad = args.edad || null;
+
+      if(edad){
+        return alumnos.filter((alumno) => alumno.edad == edad);
+      }else{
+        return alumnos
+      }
+    },
+    alumno: (_, args) => {
+      console.log("Argumentos: ", args);
+
+      var nombre = args.nombre || null;
+      var edad = args.edad || null;
+
+      if(nombre){
+        var results = alumnos.filter( alumno => {
+          return alumno.nombre.indexOf(nombre) >= 0;
+        });
+        console.log("Nombre resultados: " ,results);
+        return results.length > 0 ? results[0] : null;
+
+      }else if(edad){
+        var results = alumnos.filter( alumno => {
+          return alumno.edad == edad;
+        });
+        console.log("Edad resultados: " ,results);
+        return results.length > 0 ? results[0] : null;
+
+      }else{
+        return null;
+      }
+    },
   },
 };
 

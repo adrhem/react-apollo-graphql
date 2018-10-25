@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2018-10-25T20:53:13.877Z",
+	"__export_date": "2018-10-25T21:12:45.218Z",
 	"__export_source": "insomnia.desktop.app:v6.0.2",
 	"resources": [
 		{
@@ -92,36 +92,15 @@
 			"_type": "request_group"
 		},
 		{
-			"_id": "req_46dda063a0084376b37a25a6ed4b78e1",
-			"authentication": {},
-			"body": {
-				"mimeType": "application/graphql",
-				"text": "{\"query\":\"{\\n\\talumnos{\\n\\t\\tnombre\\n\\t}\\n}\"}"
-			},
-			"created": 1540497673428,
+			"_id": "fld_9fffcf1a10d44b579edc4f5d42a0aa46",
+			"created": 1540501396457,
 			"description": "",
-			"headers": [
-				{
-					"id": "pair_c7c1f42c38fd443c82893f0f9466ec27",
-					"name": "Content-Type",
-					"value": "application/json"
-				}
-			],
-			"isPrivate": false,
-			"metaSortKey": -1540497673428,
-			"method": "POST",
-			"modified": 1540500142579,
-			"name": "Alumnos",
-			"parameters": [],
+			"environment": {},
+			"metaSortKey": -1540501396457,
+			"modified": 1540501396457,
+			"name": "Apollo Server",
 			"parentId": "wrk_c6b7792488164a60925155076f878965",
-			"settingDisableRenderRequestBody": false,
-			"settingEncodeUrl": true,
-			"settingMaxTimelineDataSize": 1000,
-			"settingRebuildPath": true,
-			"settingSendCookies": true,
-			"settingStoreCookies": true,
-			"url": "http://localhost:4000/",
-			"_type": "request"
+			"_type": "request_group"
 		},
 		{
 			"_id": "req_a7d236ad65774a51ba13ef55d069b31b",
@@ -320,7 +299,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1540500377346.5,
 			"method": "POST",
-			"modified": 1540500763580,
+			"modified": 1540500965375,
 			"name": "List",
 			"parameters": [],
 			"parentId": "fld_1bddd176450a448ebb4150aef8514a9b",
@@ -491,6 +470,70 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "https://todo-mongo-graphql-server.herokuapp.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_46dda063a0084376b37a25a6ed4b78e1",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"{\\n\\talumnos{\\n\\t\\tnombre \\n\\t\\tedad\\n\\t}\\n}\"}"
+			},
+			"created": 1540497673428,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c7c1f42c38fd443c82893f0f9466ec27",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540500889351.5,
+			"method": "POST",
+			"modified": 1540501937060,
+			"name": "Alumnos",
+			"parameters": [],
+			"parentId": "fld_9fffcf1a10d44b579edc4f5d42a0aa46",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_71c54c4beb244d1baeef19a8091de78b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"{\\n\\talumno(edad: 23){\\n\\t\\tnombre\\n\\t\\tedad\\n\\t}\\n}\"}"
+			},
+			"created": 1540501403045,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c7c1f42c38fd443c82893f0f9466ec27",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540500633349,
+			"method": "POST",
+			"modified": 1540501936260,
+			"name": "Alumno",
+			"parameters": [],
+			"parentId": "fld_9fffcf1a10d44b579edc4f5d42a0aa46",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/",
 			"_type": "request"
 		}
 	]
