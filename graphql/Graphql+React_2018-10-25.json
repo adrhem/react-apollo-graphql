@@ -1,0 +1,497 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-10-25T20:53:13.877Z",
+	"__export_source": "insomnia.desktop.app:v6.0.2",
+	"resources": [
+		{
+			"_id": "wrk_c6b7792488164a60925155076f878965",
+			"created": 1540497621295,
+			"description": "",
+			"modified": 1540497621295,
+			"name": "Graphql+React",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_619ad482599b4076b44e13a26d24ded1",
+			"color": null,
+			"created": 1540497621318,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1540497621318,
+			"modified": 1540498400314,
+			"name": "New Environment",
+			"parentId": "wrk_c6b7792488164a60925155076f878965",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_4f0e2ee9dc3e43e3b089b08d2617405a",
+			"cookies": [
+				{
+					"creation": "2018-10-25T20:43:03.354Z",
+					"domain": "graphql-pokemon.now.sh",
+					"expires": "2019-10-25T20:43:02.000Z",
+					"hostOnly": false,
+					"httpOnly": true,
+					"id": "4155469464512025",
+					"key": "__cfduid",
+					"lastAccessed": "2018-10-25T20:43:03.354Z",
+					"path": "/",
+					"value": "dd493bd0af1de00ef208a60072145b3aa1540500182"
+				}
+			],
+			"created": 1540497621323,
+			"modified": 1540500183355,
+			"name": "Default Jar",
+			"parentId": "wrk_c6b7792488164a60925155076f878965",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_e33de0de631a40e9acb6dba3032a5229",
+			"created": 1540500336199,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1540500336200,
+			"modified": 1540500336199,
+			"name": "Pokémon",
+			"parentId": "wrk_c6b7792488164a60925155076f878965",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_d94444207cb74cbe855a6d36a6f8998f",
+			"created": 1540500348788,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1540500348788,
+			"modified": 1540500348788,
+			"name": "GitHub",
+			"parentId": "wrk_c6b7792488164a60925155076f878965",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_21bfd279fb054f44842068bc7e0e62a6",
+			"created": 1540500362648,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1540500362648,
+			"modified": 1540500362648,
+			"name": "Países",
+			"parentId": "wrk_c6b7792488164a60925155076f878965",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_1bddd176450a448ebb4150aef8514a9b",
+			"created": 1540500382246,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1540500382246,
+			"modified": 1540500749304,
+			"name": "ToDo List",
+			"parentId": "wrk_c6b7792488164a60925155076f878965",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_46dda063a0084376b37a25a6ed4b78e1",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"{\\n\\talumnos{\\n\\t\\tnombre\\n\\t}\\n}\"}"
+			},
+			"created": 1540497673428,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c7c1f42c38fd443c82893f0f9466ec27",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540497673428,
+			"method": "POST",
+			"modified": 1540500142579,
+			"name": "Alumnos",
+			"parameters": [],
+			"parentId": "wrk_c6b7792488164a60925155076f878965",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:4000/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_a7d236ad65774a51ba13ef55d069b31b",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"{\\n  pokemon(name: \\\"Squirtle\\\") {\\n    id\\n    number\\n    name\\n    attacks {\\n      special {\\n        name\\n        type\\n        damage\\n      }\\n    }\\n    evolutions {\\n      id\\n      number\\n      name\\n      weight {\\n        minimum\\n        maximum\\n      }\\n      attacks {\\n        fast {\\n          name\\n          type\\n          damage\\n        }\\n\\t\\t\\t\\tspecial{\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\ttype\\n\\t\\t\\t\\t\\tdamage\\n\\t\\t\\t\\t}\\n      }\\n    }\\n  }\\n}\"}"
+			},
+			"created": 1540499617170,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7eba0daf6dc4f20a42264cf456868a0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540499764288,
+			"method": "POST",
+			"modified": 1540500342168,
+			"name": "Pokémon",
+			"parameters": [],
+			"parentId": "fld_e33de0de631a40e9acb6dba3032a5229",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://graphql-pokemon.now.sh/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_948925df57b04af4b8328400a91fed40",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"# https://developer.github.com/v4/explorer/\\n\\n{\\n  user(login: \\\"adrhem\\\") {\\n    id\\n    repositories(last: 10){\\n      edges{\\n        cursor\\n        node{\\n          owner{\\n            id\\n          }\\n          name\\n        }\\n      }\\n      totalCount\\n    }\\n  }\\n}\\n\"}"
+			},
+			"created": 1540499192376,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_c3c58112f6174d1292141bfa47b84be2",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540499192376,
+			"method": "POST",
+			"modified": 1540500355601,
+			"name": "User Github",
+			"parameters": [],
+			"parentId": "fld_d94444207cb74cbe855a6d36a6f8998f",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d1972eac190a4526b225ec66810939e7",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"{\\n\\tcountries{\\n\\t\\tcode\\n\\t\\tname\\n\\t\\tcurrency\\n\\t\\tlanguages{\\n\\t\\t\\tcode\\n\\t\\t\\tname\\n\\t\\t}\\n\\t}\\n}\"}"
+			},
+			"created": 1540498410942,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_2158dea0a3be41a7ac889e6a57b4a38e",
+					"name": "Accept-Encoding",
+					"value": "gzip, deflate, br"
+				},
+				{
+					"id": "pair_a5f72f234f1547f697fa6113fe73e1ef",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_2a31138a3c754153bc7ff999bc9b0770",
+					"name": "Accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_2a29fe9b8b5b4feb86cbad2f7a1dbe2a",
+					"name": "Connection",
+					"value": "keep-alive"
+				},
+				{
+					"id": "pair_01db6c446e8b43948f215da5f3cb8cbf",
+					"name": "DNT",
+					"value": "1"
+				},
+				{
+					"id": "pair_6ec2ffa0d0294fdcb04e817e5eb66a53",
+					"name": "Origin",
+					"value": "https://countries.trevorblades.com"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540498410942,
+			"method": "POST",
+			"modified": 1540500365805,
+			"name": "Paises",
+			"parameters": [],
+			"parentId": "fld_21bfd279fb054f44842068bc7e0e62a6",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://countries.trevorblades.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_19695e731d2b42d897b61c1edf958d5e",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"{\\n\\tcountry(code: \\\"MX\\\"){\\n\\t\\tcode\\n\\t\\tname\\n\\t\\tcurrency\\n\\t\\tlanguages{\\n\\t\\t\\tcode\\n\\t\\t\\tname\\n\\t\\t}\\n\\t}\\n}\"}"
+			},
+			"created": 1540498474303,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_2158dea0a3be41a7ac889e6a57b4a38e",
+					"name": "Accept-Encoding",
+					"value": "gzip, deflate, br"
+				},
+				{
+					"id": "pair_a5f72f234f1547f697fa6113fe73e1ef",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_2a31138a3c754153bc7ff999bc9b0770",
+					"name": "Accept",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_2a29fe9b8b5b4feb86cbad2f7a1dbe2a",
+					"name": "Connection",
+					"value": "keep-alive"
+				},
+				{
+					"id": "pair_01db6c446e8b43948f215da5f3cb8cbf",
+					"name": "DNT",
+					"value": "1"
+				},
+				{
+					"id": "pair_6ec2ffa0d0294fdcb04e817e5eb66a53",
+					"name": "Origin",
+					"value": "https://countries.trevorblades.com"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540498410992,
+			"method": "POST",
+			"modified": 1540500762291,
+			"name": "País por código",
+			"parameters": [],
+			"parentId": "fld_21bfd279fb054f44842068bc7e0e62a6",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://countries.trevorblades.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_86e68a659b564930897a1a1daac96c4f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"{\\n  todos{\\n    id\\n    title\\n    completed\\n  }\\n}\"}"
+			},
+			"created": 1540500297543,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7eba0daf6dc4f20a42264cf456868a0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540500377346.5,
+			"method": "POST",
+			"modified": 1540500763580,
+			"name": "List",
+			"parameters": [],
+			"parentId": "fld_1bddd176450a448ebb4150aef8514a9b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://todo-mongo-graphql-server.herokuapp.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_938d462b56f4484580e796d0e3b62d0f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation{\\n  add(title: \\\"Enseñar GraphQL\\\"){\\n    id\\n    title\\n    completed\\n  }\\n}\"}"
+			},
+			"created": 1540500426089,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7eba0daf6dc4f20a42264cf456868a0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540500070817.25,
+			"method": "POST",
+			"modified": 1540500502792,
+			"name": "Add",
+			"parameters": [],
+			"parentId": "fld_1bddd176450a448ebb4150aef8514a9b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://todo-mongo-graphql-server.herokuapp.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f2dd86bc6e294e52b08afc7622d3dd64",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation{\\n  destroy(id: \\\"5bd22c03e339601200225010\\\"){\\n    title\\n  }\\n}\"}"
+			},
+			"created": 1540500503621,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7eba0daf6dc4f20a42264cf456868a0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540499917552.625,
+			"method": "POST",
+			"modified": 1540500618208,
+			"name": "Remove",
+			"parameters": [],
+			"parentId": "fld_1bddd176450a448ebb4150aef8514a9b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://todo-mongo-graphql-server.herokuapp.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_49afb7b39b644fe1bee44a3834c7a0d5",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation{\\n  toggle(id: \\\"5bd22c70e339601200225012\\\"){\\n    title\\n    completed\\n  }\\n}\"}"
+			},
+			"created": 1540500618578,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7eba0daf6dc4f20a42264cf456868a0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540499840920.3125,
+			"method": "POST",
+			"modified": 1540500682976,
+			"name": "Toggle",
+			"parameters": [],
+			"parentId": "fld_1bddd176450a448ebb4150aef8514a9b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://todo-mongo-graphql-server.herokuapp.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_8d5a513076f244f7a0e93c8bd252b951",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation{\\n  save(\\n\\t\\tid: \\\"5bd22c70e339601200225012\\\"\\n\\t\\ttitle: \\\"Enseñar GraphQL 2\\\"\\n\\t){\\n    id\\n    title\\n    completed\\n  }\\n}\"}"
+			},
+			"created": 1540500684282,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7eba0daf6dc4f20a42264cf456868a0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540499802604.1562,
+			"method": "POST",
+			"modified": 1540500717014,
+			"name": "Modify",
+			"parameters": [],
+			"parentId": "fld_1bddd176450a448ebb4150aef8514a9b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://todo-mongo-graphql-server.herokuapp.com/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2a6a0a874e38417699eafe25b23fda22",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/graphql",
+				"text": "{\"query\":\"mutation{\\n  clearCompleted{\\n    id\\n    title\\n    completed\\n  }\\n}\"}"
+			},
+			"created": 1540500726954,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_e7eba0daf6dc4f20a42264cf456868a0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1540499802554.1562,
+			"method": "POST",
+			"modified": 1540500759471,
+			"name": "ClearCompleted",
+			"parameters": [],
+			"parentId": "fld_1bddd176450a448ebb4150aef8514a9b",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://todo-mongo-graphql-server.herokuapp.com/",
+			"_type": "request"
+		}
+	]
+}

@@ -267,7 +267,9 @@ Mutation ActualizarNombreAlumno($nombre: String!){
 # Apollo GraphQL
 Apollo es una familia de tecnologías para el uso de GraphQL. Tiene un servidor para crear un ambinete que soporte esta tecnología y multiples clientes para varias tecnologías que puedan hacer uso de GraphQL como API.
 
+
 Vease [apollographql.com](https://www.apollographql.com/)
+Visite [github.com/APIs-guru/graphql-apis](https://github.com/APIs-guru/graphql-apis) para ver APIs públicas
 
 # Contacto
 Pueden escribirme sus dudas a mi telegram: [t.me/adrian_otter](https://t.me/adrian_otter).

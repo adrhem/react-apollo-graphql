@@ -1,0 +1,15 @@
+{
+  "name": "apollo-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Adrián Méndez <adrian@bincat.me>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "apollo-server": "^2.1.0",
+    "graphql": "^14.0.2"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
