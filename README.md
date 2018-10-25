@@ -22,7 +22,6 @@ El objetivo del curso será informar y enseñar de manera simple y práctica el 
   - [Endpoint](#endpoing)
   - [Types](#types)
   - [Queries](#queries)
-  - [Arguments](#arguments)
   - [Mutations](#mutations)
 - [Apollo GraphQL](#apollo-graphql)
 - [Contacto](#contacto)
@@ -183,5 +182,92 @@ class Welcome extends React.Component {
 }
 ```
 
-## Contacto
+
+# GraphQL
+## ¿Qué es graphql?
+Es un _query language_ para API y un _runtime_ del lado del servidor para ejecutar queries usando un typo que se define previamente manejando la información.
+
+Vease [graphql.org](https://graphql.org/)
+
+## ¿Por qué GraphQL?
+Puede ser usado independientemente a un API REST, maneja tipos definidos y predefinidos por lo que hace sencilla su comprensión y facilita traer datos anidados, con relaciones y nativos. Además de ser compatible con muchas tecnologías server-side.
+
+## Insomnia
+Es un cliente gráfico para crear peticiones a un API. Es compatible con GraphQL.
+
+Vease [insomnia.rest](https://insomnia.rest/)
+
+## Endpoint
+Es el punto final de comunicación, es decir, la url a la que va destinada una petición.
+
+## Types
+Dentro de GraphQL es un componente básico que contiene campos y representa un objeto de una colección.
+
+_Por ejemplo:_
+
+```
+type Alumno {
+  id: ID! #Tipo ID, su intención es no mostrarse y solo ser usada internamente
+  nombre: String! #String no nulo
+  edad: Int # Entero
+  escuela: [Escuela]! # Un objeto también definido
+  promedio: Float # Flotante
+}
+
+type Escuela {
+  nombre: String! 
+  esta_activa: Boolean # Tipo booleano
+}
+```
+
+## Queries
+Es un objeto que representa una consulta, puede tener o no argumentos como filtro y recibe un objeto o una lista de objetos:
+
+_Por ejemplo:_
+
+```
+#Query de alumnos
+{
+  alumnos {
+    nombre
+    edad
+  }
+}
+
+#Query de alumnos con argumentos
+{
+  alumnos(nombre: "Adrián") {
+    nombre
+    promedio
+    escuela {
+      nombre
+      esta_activa
+    }
+  }
+}
+
+```
+
+## Mutations
+Representa una modificación de un objeto. Por lo general lleva argumentos y es usada para altas, modificaciones o eliminaciones. 
+
+_Por ejemplo:_
+
+```
+#Mutation de alumnos
+Mutation ActualizarNombreAlumno($nombre: String!){
+  ActualizarNombreAlumno(nombre: $nombre) {
+    nombre
+    edad
+  }
+}
+
+```
+
+# Apollo GraphQL
+Apollo es una familia de tecnologías para el uso de GraphQL. Tiene un servidor para crear un ambinete que soporte esta tecnología y multiples clientes para varias tecnologías que puedan hacer uso de GraphQL como API.
+
+Vease [apollographql.com](https://www.apollographql.com/)
+
+# Contacto
 Pueden escribirme sus dudas a mi telegram: [t.me/adrian_otter](https://t.me/adrian_otter).
