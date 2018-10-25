@@ -5,7 +5,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Message message={"Hello"} />
+        {/* <Message message={"Hello"} /> */}
+        <Message />
       </div>
     );
   }
