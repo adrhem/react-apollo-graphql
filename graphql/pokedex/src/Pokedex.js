@@ -36,13 +36,15 @@ export default class Pokedex extends Component {
 
   setPokemon = pokemon => {
     this.setState({
-      selected_pokemon: pokemon
+      selected_pokemon: pokemon,
+      error: null
     })
   }
 
   setError = error => {
     this.setState({
-      error: error
+      error: error,
+      selected_pokemon: null,
     })
   }
 }

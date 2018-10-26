@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ApolloProvider } from "react-apollo";
-import { client } from './ApolloConstants';
+import { client } from './apollo/Constants';
 
 const AppApollo = () => (
   <ApolloProvider client={client}>

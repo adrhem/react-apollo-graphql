@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
-import { client } from './ApolloConstants'
+import { client } from './apollo/Constants'
+import { PokemonQuery } from './apollo/Queries'
 
 export default class List extends Component {
   select = null;
@@ -46,43 +47,7 @@ export default class List extends Component {
     }
 
     client.query({
-      query: gql`
-        query Pokemon($name: String!){
-          pokemon(name: $name) {
-            id
-            number
-            name
-            attacks {
-              special {
-                name
-                type
-                damage
-              }
-            }
-            evolutions {
-              id
-              number
-              name
-              weight {
-                minimum
-                maximum
-              }
-              attacks {
-                fast {
-                  name
-                  type
-                  damage
-                }
-                special{
-                  name
-                  type
-                  damage
-                }
-              }
-            }
-          }
-        }
-      `,
+      query: PokemonQuery,
       variables: {
         name: name
       }
