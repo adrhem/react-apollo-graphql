@@ -24,7 +24,7 @@ El objetivo del curso será informar y enseñar de manera simple y práctica el 
   - [Queries](#queries)
   - [Mutations](#mutations)
 - [Apollo GraphQL](#apollo-graphql)
-- [React + GraphQL](#react-graphql)
+- [React + GraphQL](#react--graphql)
 - [Contacto](#contacto)
 
 # Node.JS
@@ -275,9 +275,7 @@ Visite [github.com/APIs-guru/graphql-apis](https://github.com/APIs-guru/graphql-
 
 
 # React + GraphQL 
-Un ejemplo corriendo usando Apollo Client es la Pokedex usando el [API pública](https://github.com/lucasbento/graphql-pokemon)
-
-Puede verse [aquí](https://pokedex-a6124.firebaseapp.com/).
+Un ejemplo funcionando usando Apollo Client es la Pokedex usando el [API pública](https://github.com/lucasbento/graphql-pokemon) puede consultarse [aquí](https://pokedex-a6124.firebaseapp.com/).
 
 
 # Contacto
