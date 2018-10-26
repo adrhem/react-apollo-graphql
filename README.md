@@ -24,6 +24,7 @@ El objetivo del curso será informar y enseñar de manera simple y práctica el 
   - [Queries](#queries)
   - [Mutations](#mutations)
 - [Apollo GraphQL](#apollo-graphql)
+- [React + GraphQL](#react-graphql)
 - [Contacto](#contacto)
 
 # Node.JS
@@ -269,7 +270,15 @@ Apollo es una familia de tecnologías para el uso de GraphQL. Tiene un servidor 
 
 
 Vease [apollographql.com](https://www.apollographql.com/)
+
 Visite [github.com/APIs-guru/graphql-apis](https://github.com/APIs-guru/graphql-apis) para ver APIs públicas
+
+
+# React + GraphQL 
+Un ejemplo corriendo usando Apollo Client es la Pokedex usando el [API pública](https://github.com/lucasbento/graphql-pokemon)
+
+Puede verse [aquí](https://pokedex-a6124.firebaseapp.com/).
+
 
 # Contacto
 Pueden escribirme sus dudas a mi telegram: [t.me/adrian_otter](https://t.me/adrian_otter).
