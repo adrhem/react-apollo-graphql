@@ -1,0 +1,111 @@
+$colors: (
+  black: #1f1f1f, 
+  gray: #676767,
+  transparent: transparent,
+  white: white,
+  primary: #1a4c98
+);
+
+body{
+  font-family: sans-serif;
+  color: map-get($colors,black);
+}
+
+@each $name, $val in $colors { 
+  .bg-#{$name} {
+    background-color: $val;
+  } 
+  .color-#{$name}{
+    color: #{$val};
+  }
+  a.color-#{$name}{
+    text-decoration: none;
+    color: #{$val};
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  @for $i from 0 to 5{
+    @if($i == 0){
+      .border-#{$i}{
+        border: #{$i}px;
+      }
+      .bt-#{$i}{
+        border-top: #{$i}px;
+      }
+      .br-#{$i}{
+        border-right: #{$i}px;
+      }
+      .bb-#{$i}{
+        border-bottom: #{$i}px;
+      }
+      .bl-#{$i}{
+        border-left: #{$i}px;
+      }
+    }
+    @else{
+      .border-#{$name}-#{$i}{
+        border: #{$i}px solid #{$val};
+      }
+      .by-#{$name}-#{$i}{
+        border-top: #{$i}px solid #{$val};
+        border-bottom: #{$i}px solid #{$val};
+      }
+      .bx-#{$name}-#{$i}{
+        border-right: #{$i}px solid #{$val};
+        border-left: #{$i}px solid #{$val};
+      }
+      .bt-#{$name}-#{$i}{
+        border-top: #{$i}px solid #{$val};
+      }
+      .br-#{$name}-#{$i}{
+        border-right: #{$i}px solid #{$val};
+      }
+      .bb-#{$name}-#{$i}{
+        border-bottom: #{$i}px solid #{$val};
+      }
+      .bl-#{$name}-#{$i}{
+        border-left: #{$i}px solid #{$val};
+      }
+    }
+  }
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.form-control, .btn, button{
+  &:focus{
+    outline-color: rgba(map-get($colors, primary),.25)!important;
+    border-color: rgba(map-get($colors, primary),.25);
+    box-shadow: 0 0 0 0.2rem rgba(map-get($colors, primary),.25);
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
+  .b-sm-0{
+    border: 0;
+  }
+
+  .h-sm-initial{
+    height: initial!important;
+  }
+  h1{
+    font-size:2rem;
+  }
+  h2{
+    font-size:1.8rem;
+  }
+  h3{
+    font-size:1.6rem;
+  }
+  h4{
+    font-size:1.4rem;
+  }
+  h5{
+    font-size:1.2rem;
+  }
+}
